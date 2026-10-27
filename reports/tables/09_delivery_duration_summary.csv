@@ -1,0 +1,2 @@
+﻿n_delivered_orders,n_missing_duration,mean_days,median_days,min_days,max_days,std_days,p25_days,p75_days,p90_days,p99_days,mean_promised_days,median_promised_days,mean_days_earlier_than_promise
+96470,2971,12.5582,10.2175,0.5334,209.6286,9.5462,6.7662,15.7202,23.0964,46.0503,23.7363,23.2309,11.1781

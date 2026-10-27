@@ -1,0 +1,2 @@
+﻿table,group_column,n_groups,min,median,mean,p90,max,n_groups_size_1
+payments_per_order,order_id,99440,1,1.0,1.045,1.0,29,96479

@@ -1,0 +1,9 @@
+﻿order_status,n_orders,pct_orders,is_delivered
+delivered,96478,97.0203,True
+shipped,1107,1.1132,False
+canceled,625,0.6285,False
+unavailable,609,0.6124,False
+invoiced,314,0.3158,False
+processing,301,0.3027,False
+created,5,0.005,False
+approved,2,0.002,False

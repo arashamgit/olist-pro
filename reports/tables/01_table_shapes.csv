@@ -1,0 +1,10 @@
+﻿table,rows,columns
+orders,99441,8
+customers,99441,5
+order_items,112650,7
+order_payments,103886,5
+order_reviews,99224,7
+products,32951,9
+sellers,3095,4
+geolocation,1000163,5
+category_translation,71,2

@@ -1,0 +1,6 @@
+﻿category_label,n_items,n_orders,revenue,mean_item_price,median_item_price,mean_freight,pct_items,pct_revenue,revenue_per_item,rank_items,rank_revenue,rank_gap_revenue_minus_items,cum_revenue_pct
+computers,203,181,222963.13,1098.34,1100.0,48.45,0.1802,1.6404,1098.34,47,17,-30,76.28519999999999
+small_appliances_home_oven_and_coffee,76,75,47445.71,624.29,587.0,36.16,0.0675,0.3491,624.29,56,36,-20,99.95140000000002
+home_appliances_2,238,234,113317.74,476.12,225.94,44.54,0.2113,0.8337,476.12,43,27,-16,98.50919999999998
+agro_industry_and_commerce,212,182,72530.47,342.12,258.65,27.56,0.1882,0.5336,342.12,45,30,-15,9.2607
+musical_instruments,680,628,191498.88,281.62,94.84,27.41,0.6036,1.4089,281.62,25,19,-6,99.66990000000001

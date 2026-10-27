@@ -1,0 +1,11 @@
+﻿category_label,n_orders,n_reviews,mean_score,revenue,mean_item_price,pct_revenue,overall_mean_score,score_vs_overall,meets_min_reviews
+books_general_interest,512,508,4.46,46856.88,86.61,0.3447,4.1,0.37,True
+costruction_tools_tools,97,94,4.43,15903.95,148.95,0.117,4.1,0.33,True
+books_technical,260,257,4.4,19096.06,71.3,0.1405,4.1,0.3,True
+food_drink,227,226,4.38,15179.48,59.69,0.1117,4.1,0.28,True
+luggage_accessories,1034,1030,4.33,140429.98,130.71,1.0332,4.1,0.24,True
+books_imported,53,53,4.32,4639.85,77.46,0.0341,4.1,0.22,True
+small_appliances_home_oven_and_coffee,75,75,4.29,47445.71,626.25,0.3491,4.1,0.2,True
+food,450,445,4.28,29393.41,59.95,0.2163,4.1,0.18,True
+stationery,2311,2295,4.25,230943.23,94.86,1.6992,4.1,0.15,True
+pet_shop,1710,1701,4.24,214315.41,114.94,1.5768,4.1,0.14,True

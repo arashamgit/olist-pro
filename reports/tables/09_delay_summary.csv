@@ -1,0 +1,12 @@
+﻿metric,value
+delivered orders analysed,96470.0
+late orders,6534.0
+late share of delivered (%),6.7731
+late orders > 7 days,2862.0
+late orders 4-7 days,1802.0
+late orders 1-3 days,1870.0
+late orders > 15 days,1225.0
+mean delay days (late only),10.6201
+median delay days (late only),7.0
+p90 delay days (late only),22.0
+max delay days (late only),188.0

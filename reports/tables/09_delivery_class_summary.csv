@@ -1,0 +1,4 @@
+﻿delivery_class,n_orders,pct_of_delivered,definition,avg_delay_days
+early,88644,91.8876,delivered before the promised date,-13.71
+on_time,1292,1.3393,delivered on the promised date,0.0
+late,6534,6.7731,delivered after the promised date,10.62

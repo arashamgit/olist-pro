@@ -1,0 +1,11 @@
+﻿category_label,n_orders,n_reviews,mean_score,revenue,mean_item_price,pct_revenue,overall_mean_score,score_vs_overall,meets_min_reviews
+office_furniture,1273,1263,3.62,273960.7,168.26,2.0157,4.1,-0.48,True
+fashio_female_clothing,39,39,3.69,2803.64,63.37,0.0206,4.1,-0.4,True
+fashion_male_clothing,112,111,3.7,10797.82,82.37,0.0794,4.1,-0.39,True
+furniture_mattress_and_upholstery,38,38,3.82,4368.08,114.95,0.0321,4.1,-0.28,True
+audio,350,347,3.84,50688.5,142.37,0.3729,4.1,-0.26,True
+construction_tools_safety,167,166,3.85,40544.52,216.64,0.2983,4.1,-0.25,True
+home_confort,397,395,3.86,58572.04,139.64,0.4309,4.1,-0.24,True
+fixed_telephony,217,214,3.9,59583.0,165.13,0.4384,4.1,-0.19,True
+fashion_underwear_beach,121,120,3.93,9541.55,75.83,0.0702,4.1,-0.16,True
+bed_bath_table,9417,9313,3.97,1036988.68,96.03,7.6296,4.1,-0.13,True

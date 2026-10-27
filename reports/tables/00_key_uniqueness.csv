@@ -1,0 +1,10 @@
+﻿table,key,status,n_rows,n_distinct,n_duplicated_keys,n_rows_on_duplicate_keys,n_null_in_key
+orders,order_id,UNIQUE,99441,99441.0,0.0,0.0,0.0
+customers,customer_id,UNIQUE,99441,99441.0,0.0,0.0,0.0
+order_items,"order_id, order_item_id",UNIQUE,112650,112650.0,0.0,0.0,0.0
+order_payments,"order_id, payment_sequential",UNIQUE,103886,103886.0,0.0,0.0,0.0
+order_reviews,review_id,NOT_UNIQUE,99224,98410.0,789.0,1603.0,0.0
+products,product_id,UNIQUE,32951,32951.0,0.0,0.0,0.0
+sellers,seller_id,UNIQUE,3095,3095.0,0.0,0.0,0.0
+geolocation,(none declared),NO_DECLARED_KEY,1000163,,,,
+category_translation,product_category_name,UNIQUE,71,71.0,0.0,0.0,0.0

@@ -1,0 +1,10 @@
+﻿table,filename,exists,size_bytes,size_mb,sha256_16
+orders,olist_orders_dataset.csv,True,17654914,16.84,8df58ef3d2d7e994
+customers,olist_customers_dataset.csv,True,9033957,8.62,983a422239e1712d
+order_items,olist_order_items_dataset.csv,True,15438671,14.72,0bc4d068c4fe38cb
+order_payments,olist_order_payments_dataset.csv,True,5777138,5.51,4f713964f2815dbb
+order_reviews,olist_order_reviews_dataset.csv,True,14346950,13.68,81336b6e5183133b
+products,olist_products_dataset.csv,True,2379446,2.27,3e6569628a17fbc7
+sellers,olist_sellers_dataset.csv,True,174703,0.17,1f643d2b950373b8
+geolocation,olist_geolocation_dataset.csv,True,61273883,58.44,b514f6fc991b9566
+category_translation,product_category_name_translation.csv,True,2542,0.0,9da093e114e51753

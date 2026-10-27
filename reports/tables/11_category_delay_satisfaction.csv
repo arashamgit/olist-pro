@@ -1,0 +1,9 @@
+﻿category_label,total_orders,size_on_time_or_early,size_late,mean_on_time_or_early,mean_late,score_gap
+musical_instruments,605.0,559.0,46.0,4.43,1.91,2.51
+audio,345.0,305.0,40.0,4.12,1.72,2.39
+toys,3774.0,3542.0,232.0,4.37,2.13,2.25
+sports_leisure,7486.0,6999.0,487.0,4.37,2.17,2.2
+baby,2787.0,2567.0,220.0,4.28,2.09,2.19
+fashion_bags_accessories,1812.0,1711.0,101.0,4.36,2.19,2.17
+pet_shop,1680.0,1596.0,84.0,4.38,2.25,2.13
+stationery,2251.0,2105.0,146.0,4.43,2.32,2.12

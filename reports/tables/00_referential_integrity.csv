@@ -1,0 +1,7 @@
+﻿relationship,n_child_rows,n_distinct_child_values,n_matched_distinct,n_orphan_distinct,pct_orphan_rows,example_orphans
+orders.customer_id -> customers,99441,99441,99441,0,0.0,
+order_items.order_id -> orders,112650,98666,98666,0,0.0,
+order_items.product_id -> products,112650,32951,32951,0,0.0,
+order_items.seller_id -> sellers,112650,3095,3095,0,0.0,
+order_payments.order_id -> orders,103886,99440,99440,0,0.0,
+order_reviews.order_id -> orders,99224,98673,98673,0,0.0,

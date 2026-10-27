@@ -1,0 +1,6 @@
+﻿payment_type,n_transactions,n_single_shot,pct_single_shot
+credit_card,76795,25457,33.1493
+boleto,19784,19784,100.0
+voucher,5775,5775,100.0
+debit_card,1529,1529,100.0
+not_defined,3,3,100.0

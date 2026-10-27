@@ -1,0 +1,7 @@
+﻿population,n,note
+payment rows (transactions),103886,one row per payment transaction
+unique orders in payments,99440,an order may pay with several transactions
+orders in orders table,99441,the analysis base for order metrics
+orders with no payment row,1,created / canceled orders
+"customer rows, i.e. orders",99441,customer_id is one row per order
+unique buyers (people),96096,customer_unique_id is the physical person
