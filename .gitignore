@@ -14,3 +14,12 @@ __pycache__/
 # Temporary files
 *.tmp
 *.log
+
+# Tooling caches
+.pytest_cache/
+
+# Intermediate artefacts of the analysis run
+artifacts/
+
+# Deliverable archives (rebuilt with scripts/build_deliverables.py)
+deliverables/*.zip
