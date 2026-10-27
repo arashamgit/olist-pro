@@ -1,0 +1,18 @@
+{
+  "notebooks": [
+    "00_data_inventory.ipynb",
+    "01_data_understanding.ipynb",
+    "02_data_cleaning.ipynb",
+    "03_order_analysis.ipynb",
+    "04_customer_analysis.ipynb",
+    "05_product_analysis.ipynb",
+    "06_payment_analysis.ipynb",
+    "07_delivery_analysis.ipynb",
+    "08_customer_satisfaction.ipynb",
+    "09_delay_vs_satisfaction.ipynb",
+    "10_seller_analysis.ipynb",
+    "11_combined_analysis.ipynb",
+    "12_executive_report.ipynb"
+  ],
+  "count": 13
+}
