@@ -23,3 +23,6 @@ artifacts/
 
 # Deliverable archives (rebuilt with scripts/build_deliverables.py)
 deliverables/*.zip
+
+# Generated showcase site (built by scripts/build_site.py, published by Pages)
+/site/

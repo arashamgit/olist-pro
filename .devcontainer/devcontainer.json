@@ -1,0 +1,31 @@
+{
+  "name": "olist-pro analysis environment",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "8gb",
+    "storage": "32gb"
+  },
+  "postCreateCommand": "python -m pip install --upgrade pip && python -m pip install -r requirements.txt && python -m ipykernel install --user --name olist-pro --display-name 'olist-pro'",
+  "postAttachCommand": "echo 'Ready. Run the whole project with: python scripts/run_all.py'",
+  "remoteEnv": {
+    "MPLBACKEND": "Agg",
+    "PYTHONPATH": "${containerWorkspaceFolder}/src"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.testing.pytestEnabled": true,
+        "python.testing.pytestArgs": [
+          "tests"
+        ],
+        "files.encoding": "utf8"
+      }
+    }
+  }
+}

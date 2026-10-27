@@ -96,4 +96,25 @@ python scripts/run_all.py          # خط لوله + ۱۳ نوتبوک + گزا�
 - تفاوت امتیاز مشتریان دیرکرددار و به‌موقع: ۲.۲۷ در برابر ۴.۲۹ (اختلاف ۲.۰۲)
 - هشت ایالت با نرخ تأخیر و زمان تحویل بالاتر از میانه، نیازمند بررسی عملیاتی
 
-</div>
+### اجرای آنلاین (بدون نصب روی سیستم خودت)
+
+این مخزن برای اجرای کامل روی گیت‌هاب آماده است؛ نیازی به نصب <bdi dir="ltr">Python</bdi> روی رایانه نیست.
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/arashamgit/olist-pro)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/arashamgit/olist-pro/HEAD)
+
+| راه | چه چیزی می‌دهد | چطور |
+| :--- | :--- | :--- |
+| <bdi dir="ltr">GitHub Codespaces</bdi> | محیط کامل با وابستگی‌های نصب‌شده و کرنل پروژه | نشان بالا را بزن، ماشین ۴ هسته را انتخاب کن، سپس `python scripts/run_all.py` |
+| <bdi dir="ltr">Binder</bdi> | <bdi dir="ltr">JupyterLab</bdi> بدون نیاز به حساب؛ جلسه موقت | نشان Binder را بزن و نوتبوک‌های `notebooks/` را اجرا کن |
+| <bdi dir="ltr">GitHub Actions</bdi> | اجرای خودکار کل پروژه و دانلود خروجی‌ها | تب <bdi dir="ltr">Actions</bdi> → <bdi dir="ltr">Full analysis run</bdi> → <bdi dir="ltr">Run workflow</bdi> |
+| <bdi dir="ltr">GitHub Pages</bdi> | سایت نتایج (شاخص‌ها، پنج یافته، ۳۱ نمودار، جدول‌ها و گزارش) | `python scripts/build_site.py` و سپس فعال‌کردن <bdi dir="ltr">Settings → Pages → Source: GitHub Actions</bdi> |
+
+شرح گام‌به‌گام برای سه عضو تیم و ارائه به استاد در [docs/online_execution.md](docs/online_execution.md) آمده است.
+
+### یافته‌های کلیدی در یک نگاه
+
+- مبلغ اقلام فروش ۱۳٬۵۹۱٬۶۴۳.۷۰ رئال در ۹۹٬۴۴۱ سفارش و ۹۶٬۰۹۶ خریدار یکتا
+- میانگین امتیاز ۴.۰۹ از ۵ و پرهزینه‌ترین مشکل کیفی، تأخیر در تحویل است
+- تفاوت امتیاز مشتریان دیرکرددار و به‌موقع: ۲.۲۷ در برابر ۴.۲۹ (اختلاف ۲.۰۲)
+- هشت ایالت با نرخ تأخیر و زمان تحویل بالاتر از میانه، نیازمند بررسی عملیاتی

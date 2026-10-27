@@ -1,0 +1,56 @@
+name: Full analysis run
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_notebooks:
+        description: "Execute the 13 notebooks as well (slower)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  full-run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install the pinned environment
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Register the project kernel
+        run: python -m ipykernel install --user --name olist-pro --display-name "olist-pro"
+
+      - name: Run the pipeline, notebooks, report and tests
+        run: |
+          if [ "${{ inputs.run_notebooks }}" = "true" ]; then
+            python scripts/run_all.py
+          else
+            python scripts/run_all.py --quick
+          fi
+
+      - name: Build the deliverable archive
+        run: python scripts/build_deliverables.py
+
+      - name: Build the showcase site
+        run: python scripts/build_site.py
+
+      - name: Upload the results
+        uses: actions/upload-artifact@v4
+        with:
+          name: olist-pro-results
+          retention-days: 30
+          path: |
+            reports/**
+            deliverables/*.zip
+            site/**
