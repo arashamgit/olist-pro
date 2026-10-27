@@ -1,0 +1,16 @@
+# Olist raw datasets
+#/data/raw/*.csv
+
+# Generated datasets
+/data/processed/
+/data/interim/
+
+# Python environment
+.venv/
+venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# Temporary files
+*.tmp
+*.log
