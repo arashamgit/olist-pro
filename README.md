@@ -70,8 +70,8 @@
 | کد تحلیل | [`src/olist_analysis/`](src/olist_analysis) | ۱۳ ماژول: پیکربندی، بارگذاری، کیفیت، پاک‌سازی، ویژگی‌ها، متریک‌ها، نمودارها، گزارش، فونت |
 | اسکریپت‌ها | [`scripts/`](scripts) | دروازه کیفیت داده، خط لوله، ساخت و اجرای نوتبوک‌ها، گزارش، بسته تحویل، آزمون‌ها |
 | نوتبوک‌ها | [`notebooks/`](notebooks) | ۱۳ نوتبوک اجراشده (از شناخت داده تا گزارش مدیریتی) |
-| آزمون‌ها | [`tests/`](tests) | ۵۶ آزمون سبز روی داده واقعی و داده مصنوعی |
-| خروجی‌ها | [`reports/`](reports) | ۳۱ نمودار، ۵۸ جدول تحلیل، `metrics.json`، گزارش فارسی [Markdown](reports/executive_report.md) و [PDF](reports/executive_report.pdf) |
+| آزمون‌ها | [`tests/`](tests) | ۶۱ آزمون سبز روی داده واقعی و داده مصنوعی |
+| خروجی‌ها | [`reports/`](reports) | ۳۲ نمودار، ۵۸ جدول تحلیل، `metrics.json`، گزارش فارسی [Markdown](reports/executive_report.md) و [PDF](reports/executive_report.pdf) |
 | مستندات | [`docs/`](docs) | منشور، واژه‌نامه داده، روابط، تصمیم‌های پاک‌سازی، روش‌شناسی، نگاشت الزامات، گردش کار تیمی، نقشه راه |
 | راهنمای بازسازی | [`docs/implementation_guide/`](docs/implementation_guide) | ۱۰ فایل گام‌به‌گام برای بازسازی توسط سه عضو تیم |
 | ممیزی نهایی | [final_validation_report.md](docs/validation/final_validation_report.md) | نتیجه شش ممیزی با شاهد واقعی |
@@ -108,13 +108,6 @@ python scripts/run_all.py          # خط لوله + ۱۳ نوتبوک + گزا�
 | <bdi dir="ltr">GitHub Codespaces</bdi> | محیط کامل با وابستگی‌های نصب‌شده و کرنل پروژه | نشان بالا را بزن، ماشین ۴ هسته را انتخاب کن، سپس `python scripts/run_all.py` |
 | <bdi dir="ltr">Binder</bdi> | <bdi dir="ltr">JupyterLab</bdi> بدون نیاز به حساب؛ جلسه موقت | نشان Binder را بزن و نوتبوک‌های `notebooks/` را اجرا کن |
 | <bdi dir="ltr">GitHub Actions</bdi> | اجرای خودکار کل پروژه و دانلود خروجی‌ها | تب <bdi dir="ltr">Actions</bdi> → <bdi dir="ltr">Full analysis run</bdi> → <bdi dir="ltr">Run workflow</bdi> |
-| <bdi dir="ltr">GitHub Pages</bdi> | سایت نتایج (شاخص‌ها، پنج یافته، ۳۱ نمودار، جدول‌ها و گزارش) | `python scripts/build_site.py` و سپس فعال‌کردن <bdi dir="ltr">Settings → Pages → Source: GitHub Actions</bdi> |
+| <bdi dir="ltr">GitHub Pages</bdi> | سایت نتایج (شاخص‌ها، پنج یافته، ۳۲ نمودار، جدول‌ها و گزارش) | `python scripts/build_site.py` و سپس فعال‌کردن <bdi dir="ltr">Settings → Pages → Source: GitHub Actions</bdi> |
 
 شرح گام‌به‌گام برای سه عضو تیم و ارائه به استاد در [docs/online_execution.md](docs/online_execution.md) آمده است.
-
-### یافته‌های کلیدی در یک نگاه
-
-- مبلغ اقلام فروش ۱۳٬۵۹۱٬۶۴۳.۷۰ رئال در ۹۹٬۴۴۱ سفارش و ۹۶٬۰۹۶ خریدار یکتا
-- میانگین امتیاز ۴.۰۹ از ۵ و پرهزینه‌ترین مشکل کیفی، تأخیر در تحویل است
-- تفاوت امتیاز مشتریان دیرکرددار و به‌موقع: ۲.۲۷ در برابر ۴.۲۹ (اختلاف ۲.۰۲)
-- هشت ایالت با نرخ تأخیر و زمان تحویل بالاتر از میانه، نیازمند بررسی عملیاتی

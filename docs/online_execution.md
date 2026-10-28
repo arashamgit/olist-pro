@@ -18,10 +18,10 @@ Python روی رایانه شخصی ندارند و برای سه عضو تیم 
 
 ```bash
 python scripts/validate_data.py   # دروازه کیفیت داده: ۲۲ بررسی
-python scripts/run_all.py         # خط لوله + ۱۳ نوتبوک + گزارش + ۵۶ آزمون
+python scripts/run_all.py         # خط لوله + ۱۳ نوتبوک + گزارش + ۶۱ آزمون
 ```
 
-خروجی‌ها در `reports/` ساخته می‌شوند: ۵۸ جدول، ۳۱ نمودار، `metrics.json` و گزارش
+خروجی‌ها در `reports/` ساخته می‌شوند: ۵۸ جدول، ۳۲ نمودار، `metrics.json` و گزارش
 فارسی Markdown و PDF. نوتبوک‌ها هم با خروجی‌های واقعی ذخیره می‌شوند.
 
 سهمیه رایگان Codespaces برای حساب شخصی در صفحه Billing حساب قابل مشاهده است؛ برای
@@ -47,7 +47,7 @@ https://mybinder.org/v2/gh/arashamgit/olist-pro/HEAD
 
 | ورک‌فلو | زمان اجرا | کار |
 | :--- | :--- | :--- |
-| `ci.yml` | هر push و هر Pull Request | دروازه کیفیت داده (۲۲ بررسی) + ۵۶ آزمون |
+| `ci.yml` | هر push و هر Pull Request | دروازه کیفیت داده (۲۲ بررسی) + ۶۱ آزمون |
 | `analysis.yml` | دستی (تب Actions → Full analysis run → Run workflow) | کل خط لوله + نوتبوک‌ها + گزارش + ساخت ZIP؛ خروجی‌ها به‌عنوان Artifact قابل دانلود است |
 | `pages.yml` | هر push روی `main` و `release/**` | بازساخت خروجی‌ها و انتشار سایت نتایج |
 

@@ -31,6 +31,7 @@ T = آزمون در `tests/`.
 | ۵.۱.۲ | تعداد و درصد سفارش بر اساس وضعیت | 03 | `order_status_summary` | جدول `05_order_status_summary` | sum(pct)=100 | PASS |
 | ۵.۲.۳ | تعداد سفارش در هر ماه + نمودار روند | 03 | `monthly_orders` | Fig ۲ | - | PASS |
 | ۵.۲.۴ | تفکیک سال و ماه و بررسی رشد | 03 | `year_month_matrix`, `growth_evidence` | جدول `05_year_month_matrix` | - | PASS |
+| ۵.۲.۴ | نمایش ماتریس سال و ماه | 03 | `year_month_matrix` + `sns.heatmap` | Fig ۳۲ | - | PASS |
 | ۵.۳.۵ | سفارش در روزهای هفته | 03 | `weekday_orders` | Fig ۳ | - | PASS |
 | ۵.۴.۶ | پنج ماه با بیشترین سفارش | 03 | `top_months` | Fig ۴ | - | PASS |
 | ۵.ن | نتیجه‌گیری کسب‌وکاری روند | 03 | - | متن تفسیر نوتبوک | - | PASS |
@@ -99,7 +100,7 @@ T = آزمون در `tests/`.
 | ۱۴.۲ | اهمیت و محدودیت هر یافته | 12 | `Finding.importance/limitation` | گزارش PDF بخش ۳ | - | PASS |
 | ۱۴.۳ | سه پیشنهاد عملی | 12 | `reporting.Recommendation` | گزارش PDF بخش ۴ | - | PASS |
 | ۱۴.۳ | مسئله، یافته پشتیبان، تغییر، شاخص پایش | 12 | `Recommendation` | گزارش PDF بخش ۴ | - | PASS |
-| ۱۵ | الزامات نمودار (عنوان، محور، واحد، تفسیر) | همه | `plotting._save` | ۳۱ نمودار + فایل توضیح | - | PASS |
+| ۱۵ | الزامات نمودار (عنوان، محور، واحد، تفسیر) | همه | `plotting._save` | ۳۲ نمودار + فایل توضیح | - | PASS |
 | ۱۶.۱ | فایل Jupyter Notebook | همه | `scripts/build_notebooks.py` | `notebooks/*.ipynb` | اجرای کامل | PASS |
 | ۱۶.۲ | گزارش مدیریتی PDF | 12 | `reporting.render_pdf` | `reports/executive_report.pdf` | - | PASS |
 | ۱۶.۳ | اجرای کامل نوتبوک بدون خطا | همه | `scripts/execute_notebooks.py` | خروجی نوتبوک‌ها | ۱۳/۱۳ | PASS |

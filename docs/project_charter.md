@@ -66,7 +66,7 @@ Olist یک پلتفرم تجارت الکترونیک برزیلی است که �
 
 ۱. کتابخانه پایتون قابل استفاده مجدد در `src/olist_analysis/`
 ۲. ۱۳ نوتبوک تحلیلی مستقل در `notebooks/`
-۳. ۳۱ نمودار و ۵۸ جدول تحلیل تولیدشده در `reports/figures/` و `reports/tables/`
+۳. ۳۲ نمودار و ۵۸ جدول تحلیل تولیدشده در `reports/figures/` و `reports/tables/`
 ۴. گزارش مدیریتی فارسی در `reports/executive_report.md` و `reports/executive_report.pdf`
 ۵. مستندات شناخت داده، روابط، تصمیم‌های پاک‌سازی، روش‌شناسی و ردیابی الزامات در `docs/`
 ۶. آزمون‌های خودکار در `tests/`

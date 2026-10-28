@@ -66,7 +66,7 @@ git checkout -b release/v1.0
 | کد `src/` و `scripts/` | `data/raw/*.csv` (حجیم؛ مسیر تهیه در `data/README.md`) |
 | ۱۳ نوتبوک با خروجی | `data/interim/`, `data/processed/` |
 | گزارش MD و PDF | `.venv/`, `__pycache__/`, `.ipynb_checkpoints/` |
-| ۳۱ نمودار و ۵۸ جدول تحلیل | هر فایل کلید، رمز یا اطلاعات حساس |
+| ۳۲ نمودار و ۵۸ جدول تحلیل | هر فایل کلید، رمز یا اطلاعات حساس |
 | آزمون‌ها و مستندات | `artifacts/` موقت |
 
 ## ۷. دستورات ترمینال
@@ -105,7 +105,7 @@ unzip -l deliverables/olist-pro-deliverables.zip | grep -Ei "\.env|key|token|sec
 | آزمون | دستور | معیار قبولی |
 | :--- | :--- | :--- |
 | دروازه داده | `python scripts/validate_data.py` | کد خروجی ۰ و همه بررسی‌ها PASS |
-| آزمون واحد | `python -m pytest -q` | ۵۶ آزمون PASS |
+| آزمون واحد | `python -m pytest -q` | ۶۱ آزمون PASS |
 | اجرای نوتبوک‌ها | `python scripts/execute_notebooks.py` | ۱۳/۱۳ اجرا، صفر خطا |
 | بازسازی از صفر | `python scripts/run_all.py` | پایان بدون خطا |
 | ساخت گزارش | `python scripts/build_report.py` | MD و PDF تولید شوند |
@@ -116,7 +116,7 @@ unzip -l deliverables/olist-pro-deliverables.zip | grep -Ei "\.env|key|token|sec
 | مورد | مقدار |
 | :--- | ---: |
 | بررسی‌های دروازه داده | ۲۲ بررسی، همه PASS |
-| آزمون‌های واحد | ۵۶ آزمون، همه PASS |
+| آزمون‌های واحد | ۶۱ آزمون، همه PASS |
 | نوتبوک اجراشده | ۱۳ از ۱۳ |
 | نمودار تولیدشده | ۳۱ |
 | جدول تحلیل تولیدشده | ۵۸ |
@@ -159,7 +159,7 @@ PR نهایی را به `main` بسازید و در توضیحات آن نتیج
 ## ۱۳. معیار پذیرش
 
 - [ ] `validate_data.py` با کد خروجی ۰ اجرا شود
-- [ ] `pytest` سبز باشد (۵۶ آزمون)
+- [ ] `pytest` سبز باشد (۶۱ آزمون)
 - [ ] همه ۱۳ نوتبوک بدون خطا اجرا شوند
 - [ ] گزارش MD و PDF موجود و خوانا باشند
 - [ ] ZIP ساخته شده و محتوای آن مطابق فهرست مجاز باشد
