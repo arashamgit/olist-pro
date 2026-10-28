@@ -1,14 +1,23 @@
 """Persian (RTL) text helpers for Matplotlib and ReportLab.
 
-Matplotlib performs no Arabic/Persian glyph shaping and does not apply the
-bidi algorithm, so raw Persian strings are rendered as isolated, left-to-right
-letters.  :func:`fa` fixes this by running the text through ``arabic-reshaper``
-(which substitutes the contextual presentation forms) and then through
-``python-bidi`` (which reorders the runs for a left-to-right renderer).
+The two renderers need **opposite** treatment, which is why there are two
+functions here and not one:
+
+* **ReportLab** has no Arabic shaping engine: it draws every character in
+  isolation, left to right.  :func:`fa` therefore runs the text through
+  ``arabic-reshaper`` (which substitutes the contextual presentation forms) and
+  then through ``python-bidi`` (which reorders the runs for a left-to-right
+  renderer).  The PDF needs this.
+* **Matplotlib** 3.11+ with Raqm performs the joining *and* the bidi reordering
+  itself.  Giving it text that was already reordered flips the word order a
+  second time, so the chart labels come out mirrored.  :func:`t` therefore
+  returns the raw string whenever the installed Matplotlib can lay out Persian
+  on its own, and only falls back to :func:`fa` on older builds.
 
 If the font or either helper library is unavailable the functions degrade to
-returning the input unchanged, so the analysis pipeline never crashes because
-of a missing cosmetic dependency.
+returning the input unchanged, so the pipeline never crashes because of a
+missing cosmetic dependency.  ``tests/test_font_rendering.py`` turns that
+silent degradation into a test failure.
 """
 
 from __future__ import annotations
@@ -39,7 +48,7 @@ def persian_font_family() -> str | None:
 def fa(text: str) -> str:
     """Reshape and reorder Persian text for a left-to-right renderer.
 
-    Mixed Persian/Latin strings (for example ``"دستهبندی health_beauty"``) are
+    Used by the PDF builder (ReportLab).  Mixed Persian/Latin strings are
     handled by ``python-bidi``'s ``get_display``.
     """
     if not text:
@@ -58,11 +67,33 @@ def persian_available() -> bool:
     return persian_font_family() is not None
 
 
-def t(text: str) -> str:
-    """Translate a chart string: reshape it when a Persian font is available.
+@functools.lru_cache(maxsize=1)
+def matplotlib_handles_rtl() -> bool:
+    """True when Matplotlib lays Persian text out by itself (HarfBuzz + Raqm).
 
-    Charts are authored with Persian titles/labels.  When the bundled font is
-    missing the raw string is returned so the figure is still produced (the
-    letters simply will not be joined).
+    Matplotlib 3.11 with Raqm joins the letters and applies the Unicode bidi
+    algorithm internally.  Detecting that is not cosmetic: pre-reversed text
+    handed to such a build renders in the wrong order.
     """
-    return fa(text) if persian_available() else text
+    try:
+        import matplotlib
+        from matplotlib import ft2font
+
+        if not getattr(ft2font, "__libraqm_version__", ""):
+            return False
+        major, minor = (int(part) for part in matplotlib.__version__.split(".")[:2])
+        return (major, minor) >= (3, 11)
+    except Exception:  # pragma: no cover - cosmetic fallback
+        return False
+
+
+def t(text: str) -> str:
+    """Prepare a chart string for the installed Matplotlib.
+
+    With a shaping-capable Matplotlib the raw string is returned untouched and
+    the renderer does the work.  Older builds get :func:`fa`, which produces the
+    visual order they need.
+    """
+    if not text:
+        return text
+    return text if matplotlib_handles_rtl() else fa(text)

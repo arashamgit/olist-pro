@@ -29,7 +29,9 @@ python scripts/run_all.py         # خط لوله + ۱۳ نوتبوک + گزار
 
 ## ۲. Binder (لینک اجرای بدون حساب)
 
-`binder/postBuild` محیط را از `requirements.txt` می‌سازد و کرنل پروژه را ثبت می‌کند.
+`binder/requirements.txt` محیط را می‌سازد و `binder/postBuild` کرنل پروژه را ثبت می‌کند.
+این فایل باید همان قفل‌های `requirements.txt` ریشه را داشته باشد، چون repo2docker
+به‌محض وجود پوشه `binder/` فقط داخل همان پوشه را می‌گردد.
 با یک لینک، JupyterLab باز می‌شود و هر نوتبوکی از `notebooks/` اجرا می‌شود:
 
 ```text

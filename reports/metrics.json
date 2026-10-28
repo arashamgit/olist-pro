@@ -175,7 +175,7 @@
   "price_vs_satisfaction": {
     "currency": "BRL",
     "mean_score_highest_decile": 4.0581,
-    "mean_score_lowest_decile": 4.1108,
+    "mean_score_lowest_decile": 4.106,
     "n_orders": 97917,
     "score_range_across_deciles": 0.1059,
     "spearman_rho": -0.0029

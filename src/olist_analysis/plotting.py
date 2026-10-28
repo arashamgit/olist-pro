@@ -87,8 +87,18 @@ def _save(fig, name: str, caption: str = "") -> Path:
     correct right-to-left visual order.
     """
     for ax in fig.axes:
-        if ax.get_title():
-            ax.set_title(ax.get_title(), loc="right")
+        title = (
+            ax.get_title(loc="center")
+            or ax.get_title(loc="left")
+            or ax.get_title(loc="right")
+        )
+        if title:
+            # ``set_title(text, loc=...)`` writes one of three *separate* title
+            # artists, so the copy already drawn in the centre has to be cleared
+            # or the two would be printed on top of each other.
+            ax.set_title("", loc="left")
+            ax.set_title("", loc="center")
+            ax.set_title(title, loc="right")
         for axis in (ax.xaxis, ax.yaxis):
             for tick in axis.get_major_ticks():
                 label = tick.label1
@@ -350,7 +360,7 @@ def fig_delivery_histogram(delivered: pd.DataFrame, limit: int = 60) -> Path:
 def fig_delivery_class(table: pd.DataFrame) -> Path:
     labels = {"early": "زودتر از موعد", "on_time": "دقیقاً بهموقع", "late": "با تأخیر"}
     table = table.copy()
-    # raw Persian: fa() is applied centrally in _save for tick labels
+    # raw Persian: t() is applied centrally in _save for tick labels
     table["label"] = table["delivery_class"].map(labels)
     colors = [COLOR_GOOD, COLOR_SECONDARY, COLOR_ACCENT]
     fig, ax = plt.subplots()
@@ -459,7 +469,7 @@ def fig_monthly_score_trend(table: pd.DataFrame) -> Path:
 def fig_delay_satisfaction(table: pd.DataFrame) -> Path:
     labels = {"on_time_or_early": "بهموقع یا زودتر", "late": "دیرکرددار"}
     data = table.copy()
-    # raw Persian: fa() is applied centrally in _save for tick labels
+    # raw Persian: t() is applied centrally in _save for tick labels
     data["label"] = data["group"].map(labels)
     fig, ax = plt.subplots()
     bars = ax.bar(data["label"], data["mean_score"],

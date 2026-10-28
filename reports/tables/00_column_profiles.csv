@@ -45,8 +45,8 @@ sellers,seller_zip_code_prefix,int64,3095,3095,0,0.0,2246,13023 | 13844 | 20031
 sellers,seller_city,str,3095,3095,0,0.0,611,campinas | mogi guacu | rio de janeiro
 sellers,seller_state,str,3095,3095,0,0.0,23,SP | RJ | PE
 geolocation,geolocation_zip_code_prefix,int64,1000163,1000163,0,0.0,19015,1037 | 1046 | 1041
-geolocation,geolocation_lat,float64,1000163,1000163,0,0.0,717372,-23.54562128115268 | -23.546081127035535 | -23.54612896641469
-geolocation,geolocation_lng,float64,1000163,1000163,0,0.0,717615,-46.63929204800168 | -46.64482029837157 | -46.64295148361138
+geolocation,geolocation_lat,float64,1000163,1000163,0,0.0,717360,-23.54562128115268 | -23.54608112703553 | -23.54612896641469
+geolocation,geolocation_lng,float64,1000163,1000163,0,0.0,717613,-46.63929204800168 | -46.64482029837157 | -46.64295148361138
 geolocation,geolocation_city,str,1000163,1000163,0,0.0,8011,sao paulo | são paulo | sao bernardo do campo
 geolocation,geolocation_state,str,1000163,1000163,0,0.0,27,SP | RN | AC
 category_translation,product_category_name,str,71,71,0,0.0,71,beleza_saude | informatica_acessorios | automotivo
