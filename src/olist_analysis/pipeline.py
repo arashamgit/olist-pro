@@ -311,6 +311,7 @@ def render_figures(ds: Dataset, results: Results) -> None:
     fig("fig_18_monthly_delivery_trend",
         P.fig_monthly_delivery_trend(t["09_monthly_delivery_trend"]))
     fig("fig_31_state_late_rate", P.fig_state_late_rate(t["09_delivery_by_state"]))
+    fig("fig_32_year_month_heatmap", P.fig_year_month_heatmap(t["05_year_month_matrix"]))
     fig("fig_19_review_scores", P.fig_review_scores(t["10_review_score_distribution"]))
     fig("fig_20_category_scores", P.fig_category_scores(
         t["10_category_satisfaction_best"], t["10_category_satisfaction_worst"]))
@@ -387,8 +388,10 @@ def run_pipeline(dataset: Dataset | None = None) -> Results:
     results = Results()
 
     compute_tables(ds, results)
-    write_headline_extra(ds, results)
+    # figures first: ``write_headline_extra`` records how many figures exist, so
+    # calling it before ``render_figures`` used to persist "figures": 0.
     render_figures(ds, results)
+    write_headline_extra(ds, results)
 
     for name, frame in results.tables.items():
         _write_table(frame, name)

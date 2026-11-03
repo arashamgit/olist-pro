@@ -22,6 +22,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
 import pandas as pd  # noqa: E402
+import seaborn as sns  # noqa: E402
 
 from .config import (  # noqa: E402
     COLOR_ACCENT,
@@ -76,15 +77,14 @@ def _save(fig, name: str, caption: str = "") -> Path:
     project is treated identically:
 
     * titles are right aligned (the Persian reading direction);
-    * tick labels and legend entries are passed through :func:`fa`, because they
-      often come straight from a data column and would otherwise be drawn in
-      logical rather than visual order.
+    * tick labels and legend entries are passed through :func:`t`, which returns
+      the raw string on a shaping-capable Matplotlib and only pre-orders text on
+      older builds.
 
-    Matplotlib shapes Persian glyphs but does **not** apply the Unicode bidi
-    algorithm, which is exactly why :func:`fa` is required. This behaviour was
-    verified in ``artifacts/rtl_test.png``: the raw string renders with joined
-    letters in logical order, while the ``fa``-processed string renders in the
-    correct right-to-left visual order.
+    Matplotlib 3.11 with HarfBuzz + Raqm joins the letters **and** applies the
+    Unicode bidi algorithm by itself; handing it already-reversed text mirrors
+    the words. That was verified in ``artifacts/rtl_test.png``. ReportLab has
+    neither engine, so only the PDF path calls :func:`fa`.
     """
     for ax in fig.axes:
         title = (
@@ -643,6 +643,43 @@ def fig_state_late_rate(table: pd.DataFrame, min_orders: int = 100, k: int = 12)
                 "درصد سفارشهای دیرکرددار", color=COLOR_ACCENT, value_fmt="{:,.2f}%")
     return _save(fig, "fig_31_state_late_rate",
                  "نمودار ۳۱ - نرخ تأخیر در ایالتها همراه با حجم نمونه")
+
+
+def fig_year_month_heatmap(matrix: pd.DataFrame) -> Path:
+    """Question 5.2 - orders per year and month as a heatmap.
+
+    The matrix has one row per purchase year and ``month_01`` .. ``month_12``
+    columns plus two summary columns, which are dropped here so the colour scale
+    stays comparable across months. This is the one chart drawn with Seaborn:
+    a heatmap is exactly the comparison the brief asks for ("orders split by
+    year and month, shown over time") and Seaborn does it with a colour bar and
+    value annotations that would otherwise have to be hand-written.
+    """
+    months = [f"month_{month:02d}" for month in range(1, 13)]
+    values = matrix.set_index("purchase_year")[months].astype(int)
+    values.columns = [str(month) for month in range(1, 13)]
+    values.index = [str(int(year)) for year in values.index]
+
+    fig, ax = plt.subplots(figsize=(12, 4.8))
+    sns.heatmap(
+        values,
+        annot=True,
+        fmt="d",
+        cmap="Blues",
+        linewidths=0.5,
+        linecolor="white",
+        cbar_kws={"label": t("تعداد سفارش")},
+        ax=ax,
+    )
+    ax.set_title(t("تعداد سفارش به تفکیک سال و ماه"))
+    ax.set_xlabel(t("ماه"))
+    ax.set_ylabel(t("سال"))
+    ax.set_yticklabels(ax.get_yticklabels(), rotation=0)
+    return _save(
+        fig,
+        "fig_32_year_month_heatmap",
+        "نمودار ۳۲ - ماتریس سال و ماه سفارش‌ها؛ رنگ تیره‌تر یعنی ماه پرترافیک‌تر و عدد صفر یعنی در آن ماه سفارشی ثبت نشده است",
+    )
 
 
 def figure_paths() -> list[Path]:
