@@ -592,10 +592,6 @@ def render_markdown(report: ExecutiveReport, headline: dict) -> str:
         "کمهزینهترین مسیر بهبود شاخصهای مشتری است.\n"
     )
 
-    lines.append("\n## پیوست: فهرست نمودارها\n")
-    for name, caption in report.figure_list:
-        lines.append(f"- `figures/{name}` - {caption}")
-
     lines.append("\n## پیوست: واژهنامه کوتاه\n")
     lines.append("| اصطلاح | تعریف |")
     lines.append("| --- | --- |")
@@ -763,10 +759,6 @@ def render_pdf(report: ExecutiveReport, headline: dict, path: Path = PDF_PATH) -
             justified,
         )
     )
-
-    story.append(pr("پیوست: فهرست نمودارها", h1))
-    for name, caption in report.figure_list:
-        story.append(pr(f"• {caption} ({name})", bullet))
 
     doc = SimpleDocTemplate(
         str(path),
