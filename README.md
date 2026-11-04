@@ -14,7 +14,7 @@
 
 | فایل | توضیح |
 | :--- | :--- |
-| [`notebooks/olist_full_analysis.ipynb`](notebooks/olist_full_analysis.ipynb) | نوتبوک کامل تحلیل: ۶۵ سلول شامل ۳۹ سلول کد، ۴۵ جدول و ۳۴ نمودار، همه ساخته‌شده درون همین فایل |
+| [`notebooks/olist_full_analysis.ipynb`](notebooks/olist_full_analysis.ipynb) | نوتبوک کامل تحلیل: ۶۷ سلول شامل ۴۰ سلول کد، ۴۵ جدول و ۳۵ نمودار، همه ساخته‌شده درون همین فایل |
 | [`reports/executive_report.pdf`](reports/executive_report.pdf) | گزارش مدیریتی ۸ صفحه‌ای، بدون کد، برای ارائه به مدیریت |
 | [`requirements.txt`](requirements.txt) | فهرست وابستگی‌های پایتون |
 | [`data/raw/`](data/raw) | ۹ فایل CSV خام پروژه، دقیقاً همان داده‌ای که تحلیل روی آن انجام شده است |
