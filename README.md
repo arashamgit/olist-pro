@@ -17,6 +17,7 @@
 | [`notebooks/olist_full_analysis.ipynb`](notebooks/olist_full_analysis.ipynb) | نوتبوک کامل تحلیل: ۶۹ سلول شامل ۴۱ سلول کد، ۴۷ جدول و ۳۵ نمودار، همه ساخته‌شده درون همین فایل |
 | [`reports/executive_report.pdf`](reports/executive_report.pdf) | گزارش مدیریتی ۸ صفحه‌ای، بدون کد، برای ارائه به مدیریت |
 | [`requirements.txt`](requirements.txt) | فهرست وابستگی‌های پایتون، پین‌شده و تست‌شده روی Python 3.12.1 |
+| [`reports/authors.json`](reports/authors.json) | نام تهیه‌کنندگان روی جلد گزارش؛ پس از ویرایش، `python scripts/build_report.py` را اجرا کنید تا PDF بازسازی شود |
 | [`data/raw/`](data/raw) | ۹ فایل CSV خام پروژه، دقیقاً همان داده‌ای که تحلیل روی آن انجام شده است |
 
 هیچ فایل دیگری برای اجرا لازم نیست: نوتبوک تمام جدول‌ها و نمودارها را خودش از `data/raw/` می‌سازد.
